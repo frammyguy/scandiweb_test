@@ -9,20 +9,45 @@ body
 	font-family: 'Lora', serif
 header
 	margin: 0 65px
+	margin-top: 20px
+	padding-bottom: 5px
 	border-bottom: 1px solid black
 	display: flex
 	align-items: center
 	justify-content: space-between
-	height: 70px
+	max-height: 70px
 	.header_text
 		text-transform: capitalize
+		font-size: 35px
 	nav
-		button
-			border: 1px solid black
+		.link-to-add-page
+			text-decoration: none
+			color: #000
+		#add-product-btn, #delete-product-btn
+			text-transform: uppercase
+			border: 2px solid black
+			box-shadow: 5px 5px 2px black
+			background-color: #fff
+			font-weight: 700
+			padding: 5px 10px
+			max-width: 170px
+			max-height: 50px
+		#add-product-btn
+			margin-right: 30px
 .main
 	height: 100px
 	width: 100%
+
+.main
+	.product-block
+		.block-
+			&checkbox
+				color: #000
+
+
+
 footer
+	font-size: 20px
 	margin: 0 65px
 	border-top: 1px solid black
 	text-transform: capitalize
