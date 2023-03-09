@@ -11,9 +11,9 @@
 <body>
 
 	<header>
-		<div class="header_text">
+		<a href="index.php" class="header_text">
 			Product List
-		</div>
+		</a>
 		<nav>
 			<a class="link-to-add-page" href="addproduct.php">
 				<button id="add-product-btn" href="addproduct.php">
@@ -26,20 +26,207 @@
 		</nav>
 	</header>
 
-	<section class="main">
-
-		<div class="product-block">
-			<div class="block-checkbox">
-				<input type="checkbox" class="delete-checkbox"> 
+	<section class="container main">
+		<div class="row">
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
 			</div>
-			<div class="block block-sku">sku</div>
-			<div class="block block-name">name</div>
-			<div class="block block-price">price</div>
-			<div class="block block-size">size</div>
-			<div class="block block-weight">weight</div>
-			<div class="block block-dimensions">dimensions</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
+			<div class="col col-md-3 product-block">
+				<div class="block-checkbox">
+					<input type="checkbox" class="delete-checkbox"> 
+				</div>
+				<div class="block block-sku">sku</div>
+				<div class="block block-name">name</div>
+				<div class="block block-price">price</div>
+				<div class="block block-size">size</div>
+				<div class="block block-weight">weight</div>
+				<div class="block block-dimensions">dimensions</div>
+			</div>
 		</div>
-
 	</section>
 
 	<footer>

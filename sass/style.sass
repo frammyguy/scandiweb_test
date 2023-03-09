@@ -7,10 +7,18 @@
 
 body
 	font-family: 'Lora', serif
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	height: 100vh
 header
+	position: fixed
+	left: 0
+	right: 0
 	margin: 0 65px
-	margin-top: 20px
 	padding-bottom: 5px
+	padding-top: 20px
+	background-color: #fff
 	border-bottom: 1px solid black
 	display: flex
 	align-items: center
@@ -19,11 +27,15 @@ header
 	.header_text
 		text-transform: capitalize
 		font-size: 35px
+		text-decoration: none
+		color: #000
+		margin-left: 30px
 	nav
 		.link-to-add-page
 			text-decoration: none
 			color: #000
-		#add-product-btn, #delete-product-btn
+		#add-product-btn, #delete-product-btn,
+		#save-product-btn, #cancel-product-btn
 			text-transform: uppercase
 			border: 2px solid black
 			box-shadow: 5px 5px 2px black
@@ -32,26 +44,22 @@ header
 			padding: 5px 10px
 			max-width: 170px
 			max-height: 50px
-		#add-product-btn
 			margin-right: 30px
-.main
-	height: 100px
-	width: 100%
-
-.main
-	.product-block
-		.block-
-			&checkbox
-				color: #000
-
-
-
 footer
-	font-size: 20px
+	position: fixed
+	bottom: 0
+	left: 0
+	right: 0
+	font-size: 15px
 	margin: 0 65px
+	background-color: #fff
 	border-top: 1px solid black
 	text-transform: capitalize
-	height: 100px
+	height: 60px
 	display: flex
 	justify-content: center
 	align-items: center
+	
+@import addproduct
+@import main
+@import media
