@@ -1,5 +1,4 @@
 <?php
-use Monolog\Handler\BrowserConsoleHandler;
 $link = mysqli_connect("localhost", "root", "farlands", "scandiweb_test");
 
 if ($link->connect_error) {
@@ -8,10 +7,17 @@ if ($link->connect_error) {
 
 // mysqli_set_charset($con, "utf8");
 $sql = 'SELECT * FROM products';
-
-if ($result = $link->query($sql)) {
-	$rowsCount = $result->num_rows;
+if ($result = $link->query($sql))
 	foreach ($result as $row) {
+		$db = new DB;
+		$db->setSku($row['sku']);
+		$db->setName($row['name']);
+		$db->setPrice($row['price']);
+		$db->setSize($row['size']);
+		$db->setHeight($row['height']);
+		$db->setWidth($row['width']);
+		$db->setLength($row['length']);
+		$db->setWeight($row['weight']);
 	?>
 	<div class="col col-md-3 product-block">
 		<div class="block-checkbox">
@@ -19,39 +25,39 @@ if ($result = $link->query($sql)) {
 		</div>
 		<div class="block block-sku">
 			<?php
-			echo $row['sku'];
+			echo $db->getSku();
 			?>
 		</div>
 		<div class="block block-name">
 			<?php
-			echo $row['name'];
+			echo $db->getName();
 			?>
 		</div>
 		<div class="block block-price">
 			<?php
-			echo $row['price'];
+			echo number_format($db->getPrice(),2) . " $";
 			?>
 		</div>
 		<div class="block block-size">
 			<?php
-			echo $row['size'];
+				if ($db->getSize() != 0)
+					echo "Size: " . $db->getSize() . " MB";
 			?>
 		</div>
 		<div class="block block-dimensions">
 			<?php
-			echo $row['height'];
-			echo $row['width'];
-			echo $row['length'];
+				if ($db->getHeight() != 0 && $db->getWidth() != 0 && $db->getLength() != 0)
+					echo "Dimension: " . $db->getHeight() . "x" . $db->getWidth() . "x" . $db->getLength();
 			?>
 		</div>
 		<div class="block block-weight">
 			<?php
-			echo $row['weight'];
+				if ($db->getWeight() != 0)
+					echo "Weight: " . $db->getWeight() . "KG";
 			?>
 		</div>
 	</div>
 
 <?php
-	}
-
-}
+	$db = null;
+	};
