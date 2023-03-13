@@ -25,58 +25,70 @@
 		</nav>
 	</header>
 	<section class="container card-body">
+	<?php
+	@include_once('class/DB.php');
+	@include_once('include/select.php');
+	?>
 		<form id="product-form" action="index.php" method="POST" novalidate>
 			<div class="form-group">
 				<label for="sku">SKU</label>
 				<input type="text" id="sku" name="sku" class="form-control" placeholder="#sku" required>
 			</div>
-			<div class="isInvalid" id="skuIsInvalid" hidden>Please, enter unique SKU for the product</div>
+			<div class="isInvalid" id="skuIsInvalid" hidden>Please, submit required data</div>
 			<div class="form-group">
 				<label for="name">Name</label>
 				<input type="text" id="name" name="name" class="form-control" placeholder="#name" required>
 			</div>
-			<div class="isInvalid" id="nameIsInvalid" hidden>Please, enter a valid name for the product</div>
+			<div class="isInvalid nameInvalid" id="nameIsInvalid" hidden>Please, submit required data</div>
 			<div class="form-group">
 				<label for="price">Price($)</label>
-				<input type="number" id="price" name="price" class="form-control" placeholder="#price" required>
+				<input type="text" id="price" name="price" class="form-control" placeholder="#price" required>
 			</div>
-			<div class="isInvalid" id="priceIsInvalid" hidden>Please, enter a valid price for the product</div>
+			<div class="isInvalid priceInvalid" id="priceIsInvalid" hidden>Please, submit required data</div>
 			<div class="form-group">
 				<label for="productType">Type Switcher</label>
-				<select id="productType" ame="type_switcher" class="form-control" required>
+				<select id="productType" name="type_switcher" class="form-control" required>
 					<option value="empty" hidden selected></option>
 					<option value="dvd" id="DVD">DVD</option>
 					<option value="book" id="Book">Book</option>
 					<option value="furniture" id="Furniture">Furniture</option>
 				</select>
 			</div>
-			<div class="isInvalid" id="selectIsInvalid" hidden>Please, choose one of options</div>
-			
-			<div class="form-group optional dvd" hidden>
+			<div class="isInvalid" id="selectIsInvalid" hidden>Please, submit required data</div>
+			<div class="dvd optional optionalDesc" hidden>
+				Describe the size of a DVD in megabytes, please
+			</div>
+			<div class="form-group optional dvd first_desc" hidden>
 				<label for="size">Size (MB)</label>
-				<input type="number" id="size" name="size" class="form-control" placeholder="#size">
+				<input type="text" id="size" name="size" class="form-control" placeholder="#size">
 			</div>
-			<div class="isInvalid NonReq" id="sizeIsInvalid" hidden>Please, enter a valid size in megabytes</div>
-			<div class="form-group optional furniture" hidden>
+			<div class="furniture optional optionalDesc" hidden>
+				Describe the height, width and length of the furniture in centimeters, please
+			</div>
+			<div class="isInvalid NonReq" id="sizeIsInvalid" hidden>Please, submit required data</div>
+			<div class="form-group optional furniture first_desc" hidden>
 				<label for="height">Height (CM)</label>
-				<input type="number" id="height" name="height" class="form-control" placeholder="#height">
+				<input type="text" id="height" name="height" class="form-control" placeholder="#height">
 			</div>
-			<div class="isInvalid NonReq" id="heightIsInvalid" hidden>Please, enter a valid height in centimeters</div>
+			<div class="isInvalid NonReq" id="heightIsInvalid" hidden>Please, submit required data</div>
 			<div class="form-group optional furniture" hidden>
 				<label for="width">Width (CM)</label>
-				<input type="number" id="width" name="width" class="form-control" placeholder="#width">
+				<input type="text" id="width" name="width" class="form-control" placeholder="#width">
 			</div>
-			<div class="isInvalid NonReq" id="widthIsInvalid" hidden>Please, enter a valid width in centimeters</div>
+			<div class="isInvalid NonReq" id="widthIsInvalid" hidden>Please, submit required data</div>
 			<div class="form-group optional furniture" hidden>
 				<label for="length">Length (CM)</label>
-				<input type="number" id="length" name="length" class="form-control" placeholder="#length">
+				<input type="text" id="length" name="length" class="form-control" placeholder="#length">
 			</div>
-			<div class="isInvalid NonReq" id="lengthIsInvalid" hidden>Please, enter a valid length in centimeters</div>
-			<div class="form-group optional book" hidden>
+			<div class="book optional optionalDesc" hidden>
+				Describe the weight of the book in kilograms, please
+			</div>
+			<div class="isInvalid NonReq" id="lengthIsInvalid" hidden>Please, submit required data</div>
+			<div class="form-group optional book first_desc" hidden>
 				<label for="weight">Weight (KG)</label>
-				<input type="number" id="weight" name="weight" class="form-control" placeholder="#weight">
+				<input type="text" id="weight" name="weight" class="form-control" placeholder="#weight">
 			</div>
-			<div class="isInvalid NonReq" id="weightIsInvalid" hidden>Please, enter a valid weight in kilograms</div>
+			<div class="isInvalid NonReq" id="weightIsInvalid" hidden>Please, submit required data</div>
 			<input id="formSubButton" type="submit" value="" hidden>
 		</form>
 

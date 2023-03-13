@@ -17,10 +17,10 @@
 		</a>
 		<nav>
 			<a id="add-product-btn" class="btn" href="add-product.php">
-				add
+				ADD
 			</a>
 			<button id="delete-product-btn" class="btn">
-				mass delete
+				MASS DELETE
 			</button>
 		</nav>
 	</header>

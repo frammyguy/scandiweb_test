@@ -15,56 +15,56 @@ class DB {
     private $database = "scandiweb_test";
 
     public function setSku($sku) {
-        $this->sku = $sku;
+        $this->sku = trim($sku);
     }
     public function getSku() {
         return $this->sku;
     }
     
     public function setName($name) {
-        $this->name = $name;
+        $this->name = trim($name);
     }
     public function getName() {
         return $this->name;
     }
     
     public function setPrice($price) {
-        $this->price = $price;
+        $this->price = trim($price);
     }
     public function getPrice() {
         return $this->price;
     }
     
     public function setSize($size) {
-        $this->size = $size;
+        $this->size = trim($size);
     }
     public function getSize() {
         return $this->size;
     }
     
     public function setHeight($height) {
-        $this->height = $height;
+        $this->height = trim($height);
     }
     public function getHeight() {
         return $this->height;
     }
     
     public function setWidth($width) {
-        $this->width = $width;
+        $this->width = trim($width);
     }
     public function getWidth() {
         return $this->width;
     }
     
     public function setLength($length) {
-        $this->length = $length;
+        $this->length = trim($length);
     }
     public function getLength() {
         return $this->length;
     }
     
     public function setWeight($weight) {
-        $this->weight = $weight;
+        $this->weight = trim($weight);
     }
     public function getWeight() {
         return $this->weight;
@@ -91,14 +91,14 @@ class DB {
     }
 
     public function setVars($row) {
-        $this->sku  = $row['sku'];
-        $this->name = $row['name'];
-        $this->price  = $row['price'];
-        $this->size = $row['size'];
-        $this->height = $row['height'];
-        $this->width = $row['width'];
-        $this->length = $row['length'];
-        $this->weight = $row['weight'];
+        $this->sku  = trim($row['sku']);
+        $this->name = trim($row['name']);
+        $this->price = trim($row['price']);
+        $this->size = trim($row['size']);
+        $this->height = trim($row['height']);
+        $this->width = trim($row['width']);
+        $this->length = trim($row['length']);
+        $this->weight = trim($row['weight']);
     }
 
     public function deleteRow($link, $key) {
