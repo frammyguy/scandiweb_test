@@ -1,7 +1,7 @@
 let select = document.querySelector('#productType');
 
 if (select !== null)
-select.addEventListener("change", (event) => {
+select.addEventListener("change", () => {
 
     document.querySelectorAll('.optional').forEach(opt => {
         opt.setAttribute("hidden", "");
@@ -28,13 +28,13 @@ select.addEventListener("change", (event) => {
 let form = document.getElementById('product-form');
 
 if (form !== null) {
-    document.getElementById('productType').addEventListener('change', function() {
+    document.getElementById('productType').addEventListener('change', () => {
         document.querySelectorAll('.NonReq').forEach(opt => {
             opt.setAttribute('hidden','hidden');
         });
     });
 
-    document.getElementById('save-product-btn').addEventListener('click', function( form ) {
+    document.getElementById('save-product-btn').addEventListener('click', () => {
         document.querySelectorAll('.isInvalid').forEach(opt => {
             opt.setAttribute('hidden','hidden');
         });
@@ -133,3 +133,25 @@ if (form !== null) {
     });
 
 };
+
+$deleteCh = document.getElementById('delete-form');
+if ($deleteCh != null)
+    document.querySelectorAll('.delete-checkbox').forEach(box => { 
+        box.addEventListener('change', () => {
+            document.querySelectorAll('.delete-checks').forEach(opt => {
+                if (opt.id == box.id) {
+                    if (box.checked)
+                        opt.checked = true;
+                    else
+                        opt.checked = false;
+                }
+            });
+        });
+    });
+
+$delButt = document.getElementById('delete-product-btn');
+
+if ($delButt != null)
+    $delButt.addEventListener('click', ()=> {
+        document.getElementById('formDelButton').click();
+    })

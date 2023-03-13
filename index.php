@@ -16,12 +16,10 @@
 			Product List
 		</a>
 		<nav>
-			<a class="link-to-add-page" href="addproduct.php">
-				<button id="add-product-btn" href="addproduct.php">
-					add
-				</button>
+			<a id="add-product-btn" class="btn" href="add-product.php">
+				add
 			</a>
-			<button id="delete-product-btn">
+			<button id="delete-product-btn" class="btn">
 				mass delete
 			</button>
 		</nav>
@@ -31,13 +29,13 @@
 		<div class="row">
 
 			<?php
-				@include_once('DB.php');
-				if (isset($_POST['sku']) && $_POST['sku'] != null) {
-					@include_once('writeData.php');
-				}
-				@include_once('displayData.php');
+				@include_once('class/DB.php');
+				if (isset($_POST['sku']) && $_POST['sku'] != null)
+					@include_once('include/writeData.php');
+				@include_once('include/displayData.php');
+				@include_once('include/deleteScript.php');
 			?>
-			
+
 		</div>
 	</section>
 

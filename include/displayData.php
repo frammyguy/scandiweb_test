@@ -1,27 +1,21 @@
 <?php
-$link = mysqli_connect("localhost", "root", "farlands", "scandiweb_test");
+$db = new DB;
 
-if ($link->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-  } 
+$link = $db->connect();
 
-// mysqli_set_charset($con, "utf8");
 $sql = 'SELECT * FROM products';
-if ($result = $link->query($sql))
+
+$checkboxcounter = [];
+
+if ($result = $link->query($sql))  
 	foreach ($result as $row) {
 		$db = new DB;
-		$db->setSku($row['sku']);
-		$db->setName($row['name']);
-		$db->setPrice($row['price']);
-		$db->setSize($row['size']);
-		$db->setHeight($row['height']);
-		$db->setWidth($row['width']);
-		$db->setLength($row['length']);
-		$db->setWeight($row['weight']);
+		$db->setVars($row);
+		array_push($checkboxcounter, $db->getSku());
 	?>
 	<div class="col col-md-3 product-block">
 		<div class="block-checkbox">
-			<input type="checkbox" class="delete-checkbox"> 
+			<input type="checkbox" class="delete-checkbox" id="<?php echo $db->getSku() ?>"> 
 		</div>
 		<div class="block block-sku">
 			<?php
