@@ -12,11 +12,11 @@
 <body>
 
 	<header>
-		<a href="index.php" class="header_text">
+		<a href="#" class="header_text">
 			Product List
 		</a>
 		<nav>
-			<a id="add-product-btn" class="btn" href="add-product.php">
+			<a id="add-product-btn" class="btn" href="add-product">
 				ADD
 			</a>
 			<button id="delete-product-btn" class="btn">

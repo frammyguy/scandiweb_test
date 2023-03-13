@@ -12,14 +12,14 @@
 <body>
 
 	<header>
-		<a href="index.php" class="header_text">
+		<a href="index" class="header_text">
 			Product List
 		</a>
 		<nav>
 			<button id="save-product-btn" type="button" class="btn">
 				Save
 			</button>
-			<a href="index.php" id="cancel-product-btn" class="btn">
+			<a href="index" id="cancel-product-btn" class="btn">
 				cancel
 			</a>
 		</nav>
@@ -29,7 +29,7 @@
 	@include_once('class/DB.php');
 	@include_once('include/select.php');
 	?>
-		<form id="product-form" action="index.php" method="POST" novalidate>
+		<form id="product-form" action="index" method="POST" novalidate>
 			<div class="form-group">
 				<label for="sku">SKU</label>
 				<input type="text" id="sku" name="sku" class="form-control" placeholder="#sku" required>
